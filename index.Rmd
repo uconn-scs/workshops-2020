@@ -27,7 +27,7 @@ htmltools::img(src = 'logo2.png',
 htmltools::img(src = 'core_logo.png', 
                alt = 'logo', 
                style = 'position:absolute; top:100px; 
-               left:750px; padding:10px;')
+               left:780px; padding:10px;')
 
 ```
 
