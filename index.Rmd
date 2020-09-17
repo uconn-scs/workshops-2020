@@ -27,7 +27,7 @@ htmltools::img(src = 'logo2.png',
 htmltools::img(src = 'core_logo.png', 
                alt = 'logo', 
                style = 'position:absolute; top:120px; 
-               left:900px; padding:10px;')
+               left:950px; padding:10px;')
 
 ```
 
@@ -35,12 +35,12 @@ htmltools::img(src = 'core_logo.png',
 ---
 
 ## Introduction
-It is impossible to be an expert in all aspects of science, mathematics, statistics, business, communication, psychology and all the other myriad skills necessary to solve complex problems in the real world. UConn's Statistical Consulting Services aims to bridge the gap between statisticians and domain experts from across disciplines at UConn and Connecticut. We provide statistical support in the form of [statistical consultations](https://statsconsulting.uconn.edu/), seminars and workshops. 
+It is impossible to be an expert in all aspects of science, mathematics, statistics, business, communication, psychology and all the other myriad skills necessary to solve complex problems in the real world. UConn's Statistical Consulting Services aims to bridge the gap between statisticians and domain experts from across disciplines at UConn and across Connecticut. We provide statistical support in the form of [statistical consultations](https://statsconsulting.uconn.edu/), seminars and workshops. 
 
 ### Aims of this workshop series
 The aims of this workshop series are to i) introduce participants to statistical and data visualization tools available in R, ii) promote the use or R by participants in their own work and research, and ii) promote reproducible research through making all code and workshop content freely available to all participants. 
 
-### What's in this page
+### What's on this page
 This page is going to guide you through **steps to take** to prepare for the upcoming workshops. The primary goals are to: \newline
 1. Have each participant ready to use R and Rstudio. \newline
 2. Provide pratical tips on how to prepare for the workshops. \newline
@@ -91,6 +91,62 @@ To open a new _R script_ go to File > New File > R Script. Now, the **Rstudio** 
 All of you code can now be written in this script and saved on your computer for later. Next we will run through some basics of R syntax. 
 
 ### Introduction to R{#intro}
+Now that we have opened a new R script, we can begin writing commands and sending them to R to be executed. Each line of code that we run will be printed in the console, next to the '>'. R will then evaluate the command and try to execute it. Some of the simplest commands are for using R like a calculator. For example, type '1 + 100' into your R script.
+
+```{r, eval = FALSE}
+1 + 100
+
+```
+
+![](intro1.png)
+
+Right now, the command only exists in the R script and has not been sent to R. There are two main ways of ways sending commands from your R script to R:
+* By placing your cursor on the line you want to run and clicking on the 'run' button on the top right-hand side of the script pane:
+
+![](intro2.png)
+
+* Alternatively, you can use either 'Cmd + Enter' (on a Mac), or 'Ctrl + Enter' (on a Windows machine) to execute the line that your cursor is on. 
+
+Once you have run the command you should see the command, and R's response show up in the Console pane:
+
+![](intro3.png)
+
+Here, R has evaluated your command, and executed the arithmetic and output the result. 
+
+You can also highlight multiple lines in your R script and run them simultaneously, using one of the options above:
+
+```{r, eval = FALSE}
+1 + 100
+
+10*20
+
+(5+3) / 2
+
+```
+![](intro4.png)
+
+In this case, R has executed all three commands, and output the results in the order they appeared in your R script. 
+
+##### Storing values in variables
+We can store values in variables using the assignment operator '<-', like this:
+
+```{r, eval = FALSE}
+x <- 1/4
+
+```
+
+Now, we will see that an object 'x' has appeared in our environment tab. 
+
+![](intro5.png)
+
+We have essentially stored the number `0.25` in the object 'x'. We can now execute any commands on 'x' that expect a number:
+
+```{r, eval = FALSE}
+1 + x
+```
+
+![](intro6.png)
+
 
 ---
 ## Workshop material{#material}
