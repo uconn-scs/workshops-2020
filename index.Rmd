@@ -100,7 +100,7 @@ Now that we have opened a new R script, we can begin writing commands and sendin
 
 ![](intro1.png)
 
-Right now, the command only exists in the R script and has not been sent to R. There are two main ways of ways sending commands from your R script to R:
+Right now, the command only exists in the R script and has not been sent to R. There are two main ways of sending commands from your R script to R:
 
 * By placing your cursor on the line you want to run and clicking on the 'run' button on the top right-hand side of the script pane:
 
