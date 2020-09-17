@@ -1,11 +1,31 @@
 ---
-title: "UConn SCS Fall 2020 Workshop"
+title: "UConn SCS Fall 2020 Workshop Series"
 author: "The SCS Team"
 date: "`r Sys.Date()`"
 output:
   prettydoc::html_pretty:
     theme: tactile
     highlight: github
+---
+
+# Quicklinks
+* [Getting started with R and Rstudio](#start)
+* [Introduction to R](#intro)
+* [Workshop material](#material)
+* [Steps for a successful workshop](#steps)
+    * [Before the workshop](#before)
+    * [During the workshop](#during)
+    * [After the workshop](#after)
+* [About the SCS](#about)
+
+```{r, echo=FALSE}
+htmltools::img(src = 'logo.png', 
+               alt = 'logo', 
+               style = 'position:absolute; top:150px; 
+               left:550px; padding:10px;')
+```
+
+
 ---
 
 ## Introduction
@@ -15,15 +35,19 @@ It is impossible to be an expert in all aspects of science, mathematics, statist
 The aims of this workshop series are to i) introduce participants to statistical and data visualization tools available in R, ii) promote the use or R by participants in their own work and research, and ii) promote reproducible research through making all code and workshop content freely available to all participants. 
 
 ### What's in this page
-This page is going to guide you through steps to take to prepare for the upcoming workshops. The primary goals are to: \newline
-
+This page is going to guide you through **steps to take** to prepare for the upcoming workshops. The primary goals are to: \newline
 1. Have each participant ready to use R and Rstudio. \newline
 2. Provide pratical tips on how to prepare for the workshops. \newline
 3. Outline the content of each workshop. \newline
 4. Link to important resources. \newline
 
 
-## Getting started with R and Rstudio
+### Workshop Survey
+Before participating in one of our workshops please [register here](https://statsconsulting.uconn.edu/workshop-schedule/), and be complete our [pre-workshop survey](). This **suvery** is a valuable tool, allowing us to ensure that you get the most out of our workshops.  
+
+---
+
+## Getting started with R and Rstudio{#start}
 
 ### Installing R and Rstudio
 #### Windows
@@ -59,3 +83,21 @@ To open a new _R script_ go to File > New File > R Script. Now, the **Rstudio** 
 ![](01-rstudio-script.png)
 
 All of you code can now be written in this script and saved on your computer for later. Next we will run through some basics of R syntax. 
+
+### Introduction to R{#intro}
+
+---
+## Workshop material{#material}
+
+---
+## Steps for a successful workshop{#steps}
+
+### Before the workshop{#before}
+
+### During the workshop(#during)
+
+### After the workshop(#after)
+
+--- 
+
+## About the SCS{#about}
