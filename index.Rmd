@@ -18,7 +18,7 @@ output:
     * [After the workshop](#after)
 * [About the SCS](#about)
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, eval = FALSE, include=FALSE}
 htmltools::img(src = 'logo2.png', 
                alt = 'logo', 
                style = 'position:absolute; top:100px; 
