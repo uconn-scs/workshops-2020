@@ -180,10 +180,10 @@ So far, the arithmetic and other functions (like `mean()`) we have used are buil
 
 There are 2 steps to using packages in R: i) installing them onto your machine, and ii) loading them into your R session.
 
-For the first step, you can use the `install.packages` function. For these workshops, we will install serveral packages. To begin, install `github`:
+For the first step, you can use the `install.packages` function. For these workshops, we will install serveral packages. To begin, install `ggplot2`:
 
 ```{r, eval = FALSE}
-install.packages("github")
+install.packages("ggplot2")
 
 ```
 
