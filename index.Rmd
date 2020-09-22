@@ -11,12 +11,11 @@ output:
 # Quicklinks
 * [Getting started with R and Rstudio](#start)
 * [Introduction to R](#intro)
-* [Workshop material](#material)
+* [ Workshop Outlines](#abcd)
 * [Steps for a successful workshop](#steps)
-    * [Before the workshop](#before)
-    * [During the workshop](#during)
-    * [After the workshop](#after)
-* [About the SCS](#about)
+    + [Before the workshop](#before)
+    + [During the workshop](#during)
+    + [After the workshop](#after)
 
 ```{r, echo=FALSE, eval = FALSE, include=FALSE}
 htmltools::img(src = 'logo2.png', 
@@ -32,24 +31,24 @@ htmltools::img(src = 'core_logo.png',
 ```
 
 
----
-
-## Introduction
 It is impossible to be an expert in all aspects of science, mathematics, statistics, business, communication, psychology and all the other myriad skills necessary to solve complex problems in the real world. UConn's Statistical Consulting Services aims to bridge the gap between statisticians and domain experts from across disciplines at UConn and across Connecticut. We provide statistical support in the form of [statistical consultations](https://statsconsulting.uconn.edu/), seminars and workshops. 
 
 ### Aims of this workshop series
-The aims of this workshop series are to i) introduce participants to statistical and data visualization tools available in R, ii) promote the use or R by participants in their own work and research, and ii) promote reproducible research through making all code and workshop content freely available to all participants. 
+The aims of this workshop series are to i) introduce participants to statistical and data visualization tools available in R, ii) promote the use or R by participants in their own work and research, and iii) promote reproducible research through making all code and workshop content freely available to all participants. 
 
 ### What's on this page
 This page is going to guide you through **steps to take** to prepare for the upcoming workshops. The primary goals are to: \newline
 1. Have each participant ready to use R and Rstudio. \newline
 2. Provide pratical tips on how to prepare for the workshops. \newline
 3. Outline the content of each workshop. \newline
-4. Link to important resources. \newline
-
 
 ### Workshop Survey
-Before participating in one of our workshops please [register here](https://statsconsulting.uconn.edu/workshop-schedule/), and be complete our [pre-workshop survey](). This **suvery** is a valuable tool, allowing us to ensure that you get the most out of our workshops.  
+Before participating in one of our workshops please [register here](https://statsconsulting.uconn.edu/workshop-schedule/), and be complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link). This **survey** is a valuable tool, allowing us to ensure that you get the most out of our workshops.  
+
+
+### Live Coding
+Similar to a [Software or Data Carpentry workshop](https://carpentries.org/), instructors will work through the workshop with participants, typing in the code, reformatting data, and talking as we go. This is called “live coding”. However, the instructor is not live coding in a vacuum. Importantly, participants are strongly encouraged to “code-along” with the instructor. We refer to the practice of having the instructor live code and the learners code along as “participatory live coding” or, less formally, ‘code-along sessions’. For some suggestions on how to format you screen, see [below](#during).
+
 
 ---
 
@@ -148,19 +147,202 @@ We have essentially stored the number `0.25` in the object 'x'. We can now execu
 
 ![](intro6.png)
 
+We can store multiple values in an object, for example:
+
+```{r, eval = FALSE}
+x <- c(10, 15, 20)
+
+```
+
+![](intro7.png)
+(notice that we have now overwritten the previous value of 'x')
+
+We can now perform functions on the object x, for example, arithmetic:
+
+```{r, eval = FALSE}
+x + 5
+
+```
+
+![](intro8.png)
+
+Or more advanced functions, like calculating the mean:
+
+```{r, eval = FALSE}
+mean(x)
+
+```
+
+![](intro9.png)
+
+##### Installing & loading packages{#packages}
+So far, the arithmetic and other functions (like `mean()`) we have used are built into base R. There are many functions that have been developed to perform statistical analysis, data manipulations, and data visualizations and these are stored in stand-alone **packages**. Essentially these packages are collections of functions (to use a Harry Potter analogy: packages are the spell books and functions are spells). We will use a number of these packages in this workshop. We encourage all participants to install these prior to attending the workshops. 
+
+There are 2 steps to using packages in R: i) installing them onto your machine, and ii) loading them into your R session.
+
+For the first step, you can use the `install.packages` function. For these workshops, we will install serveral packages. To begin, install `github`:
+
+```{r, eval = FALSE}
+install.packages("github")
+
+```
+
+![](intro10.png)
+
+You can check which packages you have loaded by typing `installed.packages()`
+
+```{r, eval = FALSE}
+installed.packages()
+
+```
+
+To make the packages available to in the current session, you need to use the `library()` function. Note this will only work on installed packages. 
+
+```{r, eval = FALSE}
+library(ggplot2)
+
+```
+
+![](intro11.png)
+
+For the purposes of these workshops you will need to install all of the packages in the following list: \newline
+
+* dplyr \newline 
+* ggplot2 \newline 
+* dplyr \newline 
+* datasets \newline
+* AMR \newline
+* magrittr \newline
+* cowplot \newline
+* modes \newline
+* effects \newline
+* gridExtra \newline
+* bayesm \newline
+* mice \newline
+* mvoutlier \newline
+* corrplot \newline
+* GGally \newline
+* hexbin \newline
+* vcd \newline
+* DataExplorer \newline
+* sjPlot \newline
+* ggplotly \newline
+
+
+### Annotation in your R script
+It is very important to be able to annotate your scripts. This is so that when you return to a script after a few months (or years!), you can have reminders of what you did, and why you did it. Annotation in R is done with the '#'. Bt default, annotations, or **comments**, will become green in your script. Here's an example. 
+
+```{r, eval = F}
+# load libraries
+library(ggplot2)
+
+# load data
+data(diamonds)
+
+# generate plot
+ggplot(data = diamonds, 
+       mapping = aes(x = caret, color = cut)) + # call a plot, add aesthetics
+  geom_freqpoly(lwd = 1.1) + # specify type of plot and line width
+  xlim(c(0, 3)) # set limits of x-axis
+
+```
+
+![](intro12.png)
+
+Notice that this code includes 'in-line comments', where comments have been placed on the same line as the code. This is extremely useful when sharing new code with colleagues and collaborators. 
+
+#### Saving R script
+If you would like to keep all of the code you have written, you can now safe this file (File > Save), and reopen it the next time you need it. You could also then share you script (along with your data) with collaborators via email, or collaborative software, like [github](https://github.com/).
+
 
 ---
-## Workshop material{#material}
 
----
+## Workshop Outlines{#abcd}
+
+### Exploratory Data Analysis I
+* Introduction
+    + Why EDA is important 
+    + Intro to R and R studio: installation of program and packages
+* Data types 
+    + Continuous Variables
+        - Features of continuous data
+        - Estimation of location and variability
+        - Symmetry, outliers, modality, gaps, heaping, rounding, errors 
+        - Plots 
+            + Histograms 
+            + Density plots 
+            + qqplots 
+            + Boxplots
+    + Categorical Variables
+        - Features of categorical data
+        - General characteristics categorical data
+        - CAUTION!
+            + Imbalanced classes, large numbers of categories, missing data
+        - Plots
+            + Bar charts
+            + Pie charts
+            + Mosaic plots 
+* Relationships and Associations
+    + Features 
+    + Linear/non-linear relationships, outliers, clusters, gaps, barriers, hidden groups
+
+
+### Exploratory Data Analysis II
+* More about Plots
+    + Scatterplots
+    + Plotting large numbers of points
+    + Adding linear and non-linear trendlines
+* Scatterplot matrix: comparing multiple groups
+* How to decorate your plots
+    + Title
+    + Label
+    + Font size
+    + Dot size
+* Putting plots together: 'cowplot' and 'gridExtra' for combining plots
+* Multivariate continuous data (longditudinal data)
+    + Plotting time-series data
+    + Plotting spatial data
+    + 3D and interactive plots with 'ggplotly'
+
+
+
+
 ## Steps for a successful workshop{#steps}
-
 ### Before the workshop{#before}
+1. Complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link)
+2. Make sure that you have downloaded and installed R and Rstudio
+3. Work through the introduction to R and Rstudio section on this page
+4. Install the packages listed in the [Installing & loading packages](#packages)
+5. Ensure that you are comfortable opening an R script and loading packages
+6. Check that you are able to access and operate [WebEx](https://confluence.uconn.edu/ikb/communication-and-collaboration/webex-video-conferencing/hosting-or-joining-a-webex-meeting) 
+7. If you have any questions/issues please schedule an appointment with one of the SCS consulants, [available here](https://statsconsulting.uconn.edu/walk-in-schedule/), or email [timothy.e.moore@uconn.edu](mailto:timothy.e.moore@uconn.edu)
 
-### During the workshop(#during)
 
-### After the workshop(#after)
+### During the workshop{#during}
+1. Sign in on our [registration form]()
+2. It is hard to keep track of everything on your screen, especially if you only have a single monitor. If you are in this situation, we recommend having as few programs open on your screen as possible. We recommend splitting your layout so that you have your Rstudio session on one side of your screen, and WebEx on the other side of the screen:
+![](screen_layout.png)
+
+
+
+### After the workshop{#after}
+1. Let us know how we did! Please complete our [post-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfaUs9ibczmT_7Wsm_6-gLK7YWS4WlpcWC6unJ7fBINNH-5Rw/viewform?usp=sf_link)
+2. Reach out to [timothy.e.moore@uconn.edu](mailto:timothy.e.moore@uconn.edu) if you have any questions, or recommendations for future workshops. 
+
+
 
 --- 
 
 ## About the SCS{#about}
+
+The [Statistical Consulting Services](https://statsconsulting.uconn.edu/) (SCS) provides advice on statistical problems arising in the preparation of studies, the analysis of data and the interpretation of results. The SCS is available to graduate students, faculty members, as well as non-UConn clients in government and industry. The SCS provides statistical advice to faculty and graduate student researchers throughout the University generating collaborative research and serving to train graduate students in applied statistics. We can assist with: 
+
+* Design of Experiments and Surveys
+* Interpretation of Results
+* Preparation of Proposals/ Grants
+* Statistical Software Issues
+* Data Analysis and Modeling
+
+\newline
+We have 3 primary modes of consultation: [walk-in](https://statsconsulting.uconn.edu/walk-in-schedule/), [online](https://statsconsulting.uconn.edu/ask-online/), and [full project engagement](https://statsconsulting.uconn.edu/project-engagement/). Walk-in and online consultations are geared towards short, one-and-done type meetings, whereas full project engagements are designed for longer-term collaborative projects. Please feel free to [reach out](mailto:timothy.e.moore@uconn.edu) if you have questions. 
+
