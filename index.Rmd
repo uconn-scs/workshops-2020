@@ -9,13 +9,13 @@ output:
 ---
 
 # Quicklinks
-* [Getting started with R and Rstudio](#start)
-* [Introduction to R](#intro)
-* [ Workshop Outlines](#abcd)
 * [Steps for a successful workshop](#steps)
     + [Before the workshop](#before)
     + [During the workshop](#during)
     + [After the workshop](#after)
+* [Getting started with R and Rstudio](#start)
+* [Introduction to R](#intro)
+* [Workshop Outlines](#abcd)
 
 ```{r, echo=FALSE, eval = FALSE, include=FALSE}
 htmltools::img(src = 'logo2.png', 
@@ -49,6 +49,30 @@ Before participating in one of our workshops please [register here](https://stat
 ### Live Coding
 Similar to a [Software or Data Carpentry workshop](https://carpentries.org/), instructors will work through the workshop with participants, typing in the code, reformatting data, and talking as we go. This is called “live coding”. However, the instructor is not live coding in a vacuum. Importantly, participants are strongly encouraged to “code-along” with the instructor. We refer to the practice of having the instructor live code and the learners code along as “participatory live coding” or, less formally, ‘code-along sessions’. For some suggestions on how to format you screen, see [below](#during).
 
+
+---
+
+## Steps for a successful workshop{#steps}
+### Before the workshop{#before}
+1. Complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link)
+2. Make sure that you have downloaded and installed R and Rstudio
+3. Work through the introduction to R and Rstudio section on this page
+4. Install the packages listed in the [Installing & loading packages](#packages)
+5. Ensure that you are comfortable opening an R script and loading packages
+6. Check that you are able to access and operate [WebEx](https://confluence.uconn.edu/ikb/communication-and-collaboration/webex-video-conferencing/hosting-or-joining-a-webex-meeting) 
+7. If you have any questions/issues please schedule an appointment with one of the SCS consulants, [available here](https://statsconsulting.uconn.edu/walk-in-schedule/), or email [timothy.e.moore@uconn.edu](mailto:timothy.e.moore@uconn.edu)
+
+
+### During the workshop{#during}
+1. Sign in on our [registration form]()
+2. It is hard to keep track of everything on your screen, especially if you only have a single monitor. If you are in this situation, we recommend having as few programs open on your screen as possible. We recommend splitting your layout so that you have your Rstudio session on one side of your screen, and WebEx on the other side of the screen:
+![](screen_layout.png)
+
+
+
+### After the workshop{#after}
+1. Let us know how we did! Please complete our [post-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfaUs9ibczmT_7Wsm_6-gLK7YWS4WlpcWC6unJ7fBINNH-5Rw/viewform?usp=sf_link)
+2. Reach out to [timothy.e.moore@uconn.edu](mailto:timothy.e.moore@uconn.edu) if you have any questions, or recommendations for future workshops. 
 
 ---
 
@@ -303,33 +327,6 @@ If you would like to keep all of the code you have written, you can now safe thi
     + Plotting time-series data
     + Plotting spatial data
     + 3D and interactive plots with 'ggplotly'
-
-
-
-
-## Steps for a successful workshop{#steps}
-### Before the workshop{#before}
-1. Complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link)
-2. Make sure that you have downloaded and installed R and Rstudio
-3. Work through the introduction to R and Rstudio section on this page
-4. Install the packages listed in the [Installing & loading packages](#packages)
-5. Ensure that you are comfortable opening an R script and loading packages
-6. Check that you are able to access and operate [WebEx](https://confluence.uconn.edu/ikb/communication-and-collaboration/webex-video-conferencing/hosting-or-joining-a-webex-meeting) 
-7. If you have any questions/issues please schedule an appointment with one of the SCS consulants, [available here](https://statsconsulting.uconn.edu/walk-in-schedule/), or email [timothy.e.moore@uconn.edu](mailto:timothy.e.moore@uconn.edu)
-
-
-### During the workshop{#during}
-1. Sign in on our [registration form]()
-2. It is hard to keep track of everything on your screen, especially if you only have a single monitor. If you are in this situation, we recommend having as few programs open on your screen as possible. We recommend splitting your layout so that you have your Rstudio session on one side of your screen, and WebEx on the other side of the screen:
-![](screen_layout.png)
-
-
-
-### After the workshop{#after}
-1. Let us know how we did! Please complete our [post-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfaUs9ibczmT_7Wsm_6-gLK7YWS4WlpcWC6unJ7fBINNH-5Rw/viewform?usp=sf_link)
-2. Reach out to [timothy.e.moore@uconn.edu](mailto:timothy.e.moore@uconn.edu) if you have any questions, or recommendations for future workshops. 
-
-
 
 --- 
 
