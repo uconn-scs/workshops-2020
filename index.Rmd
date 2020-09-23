@@ -4,18 +4,17 @@ author: "The SCS Team"
 date: "`r Sys.Date()`"
 output:
   prettydoc::html_pretty:
-    theme: tactile
+    theme: cerulean
     highlight: github
 ---
 
-# Quicklinks
-* [Steps for a successful workshop](#steps)
-    + [Before the workshop](#before)
-    + [During the workshop](#during)
-    + [After the workshop](#after)
-* [Getting started with R and Rstudio](#start)
-* [Introduction to R](#intro)
-* [Workshop Outlines](#abcd)
+<form>
+    <button type="submit" formaction="#steps">Workshop Prep</button>
+    <button type="submit" formaction="#start">R and R Studio Setup</button>
+    <button type="submit" formaction="#intro">Intro to R</button>
+    <button type="submit" formaction="#abcd">Workshop Oultines</button>
+</form>
+
 
 ```{r, echo=FALSE, eval = FALSE, include=FALSE}
 htmltools::img(src = 'logo2.png', 
@@ -31,10 +30,11 @@ htmltools::img(src = 'core_logo.png',
 ```
 
 
+
 It is impossible to be an expert in all aspects of science, mathematics, statistics, business, communication, psychology and all the other myriad skills necessary to solve complex problems in the real world. UConn's Statistical Consulting Services aims to bridge the gap between statisticians and domain experts from across disciplines at UConn and across Connecticut. We provide statistical support in the form of [statistical consultations](https://statsconsulting.uconn.edu/), seminars and workshops. 
 
 ### Aims of this workshop series
-The aims of this workshop series are to i) introduce participants to statistical and data visualization tools available in R, ii) promote the use or R by participants in their own work and research, and iii) promote reproducible research through making all code and workshop content freely available to all participants. 
+The aims of this workshop series are to i) introduce participants to statistical and data visualization tools available in R, ii) promote the use of R by participants in their own work and research, and iii) promote reproducible research through making all code and workshop content freely available to all participants. 
 
 ### What's on this page
 This page is going to guide you through **steps to take** to prepare for the upcoming workshops. The primary goals are to: \newline
@@ -52,7 +52,7 @@ Similar to a [Software or Data Carpentry workshop](https://carpentries.org/), in
 
 ---
 
-## Steps for a successful workshop{#steps}
+## Steps for a successful workshop{#steps} 
 ### Before the workshop{#before}
 1. Complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link)
 2. Make sure that you have downloaded and installed R and Rstudio
@@ -107,7 +107,7 @@ When you first open RStudio, you will be greeted by three panels:
 
 One option for working in **Rstudio** would be to write all of our R commands directly into the *console*. One of the benefits of **Rstudio**, though is that we can store all of our commands in a document, or _script_, which we can then share with collaborators or publish along with our research. In fact, we can use documents generated in **R** and **Rstudio** to build webpages (like this one!). 
 
-To open a new _R script_ go to File > New File > R Script. Now, the **Rstudio** window should have four panes, like this:
+To open a new _R script_ go to File > New File > R Script. Now, the **Rstudio** window should have four panels, like this:
 
 ![](01-rstudio-script.png)
 
