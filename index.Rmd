@@ -238,26 +238,15 @@ library(ggplot2)
 
 ![](intro11.png)
 
-For the purposes of these workshops you will need to install all of the packages in the following list: \newline
+Some very useful packages that we recommend you install prior to attending our workshops inlcude: \newline
 
-* dplyr \newline 
-* ggplot2 \newline 
-* dplyr \newline 
-* datasets \newline
+* ggplot2 \newline
 * AMR \newline
-* magrittr \newline
+* dplyr \newline 
 * cowplot \newline
-* modes \newline
-* effects \newline
 * gridExtra \newline
-* bayesm \newline
-* mice \newline
-* mvoutlier \newline
 * corrplot \newline
 * GGally \newline
-* hexbin \newline
-* vcd \newline
-* DataExplorer \newline
 * sjPlot \newline
 * ggplotly \newline
 
@@ -294,48 +283,43 @@ If you would like to keep all of the code you have written, you can now safe thi
 
 ### Exploratory Data Analysis I
 * Introduction
-    + Why EDA is important 
+    + Why is EDA important?
     + Intro to R and R studio: installation of program and packages
-* Data types 
-    + Continuous Variables
-        - Features of continuous data
-        - Estimation of location and variability
-        - Symmetry, outliers, modality, gaps, heaping, rounding, errors 
-        - Plots 
-            + Histograms 
-            + Density plots 
-            + qqplots 
-            + Boxplots
-    + Categorical Variables
-        - Features of categorical data
-        - General characteristics categorical data
-        - CAUTION!
-            + Imbalanced classes, large numbers of categories, missing data
-        - Plots
-            + Bar charts
-            + Pie charts
-            + Mosaic plots 
+* EDA for Continuous Variables
+    + Features of continuous data
+    + Estimation of location and variability
+    + Symmetry, outliers, modality, gaps, heaping, rounding, errors 
+    + Plots 
+        - Histograms 
+        - Density plots 
+        - qqplots 
+        - Boxplots
 * Relationships and Associations
     + Features 
     + Linear/non-linear relationships, outliers, clusters, gaps, barriers, hidden groups
+* Q & A session
 
 
 ### Exploratory Data Analysis II
+* Brief Recap
+* EDA for Categorical Variables
+    + Features of categorical data
+    + General characteristics categorical data
+    + CAUTION!
+            - Imbalanced classes, large numbers of categories, missing data
+    + Plots
+        - Bar charts
+        - Pie charts
+        - Mosaic plots 
+* Relationships and Associations
+    + Combining continuous and categorical data
 * More about Plots
     + Scatterplots
     + Plotting large numbers of points
     + Adding linear and non-linear trendlines
 * Scatterplot matrix: comparing multiple groups
-* How to decorate your plots
-    + Title
-    + Label
-    + Font size
-    + Dot size
-* Putting plots together: 'cowplot' and 'gridExtra' for combining plots
-* Multivariate continuous data (longditudinal data)
-    + Plotting time-series data
-    + Plotting spatial data
-    + 3D and interactive plots with 'ggplotly'
+* Q & A session
+
 
 --- 
 
