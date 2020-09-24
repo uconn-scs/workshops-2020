@@ -7,12 +7,19 @@ output:
     theme: cerulean
     highlight: github
 ---
-
 <form>
-    <button type="submit" formaction="#steps">Workshop Prep</button>
-    <button type="submit" formaction="#start">R and R Studio Setup</button>
-    <button type="submit" formaction="#intro">Intro to R</button>
-    <button type="submit" formaction="#abcd">Workshop Oultines</button>
+    <button 
+      style="background-color:#159061;color:white;width:150px;
+      height:40px" type="submit" formaction="#steps">Workshop Preparation</button>
+    <button 
+      style="background-color:#159061;color:white;width:150px;
+      height:40px" type="submit" formaction="#start">R and R Studio Setup</button>
+    <button 
+      style="background-color:#159061;color:white;width:150px;
+      height:40px" type="submit" formaction="#intro">Introduction to R</button>
+    <button 
+      style="background-color:#159061;color:white;width:150px;
+      height:40px" type="submit" formaction="#abcd">Workshop Outlines</button>
 </form>
 
 
@@ -34,10 +41,11 @@ htmltools::img(src = 'core_logo.png',
 It is impossible to be an expert in all aspects of science, mathematics, statistics, business, communication, psychology and all the other myriad skills necessary to solve complex problems in the real world. UConn's Statistical Consulting Services aims to bridge the gap between statisticians and domain experts from across disciplines at UConn and across Connecticut. We provide statistical support in the form of [statistical consultations](https://statsconsulting.uconn.edu/), seminars and workshops. 
 
 ### Aims of this workshop series
-The aims of this workshop series are to i) introduce participants to statistical and data visualization tools available in R, ii) promote the use of R by participants in their own work and research, and iii) promote reproducible research through making all code and workshop content freely available to all participants. 
+The aims of this workshop series are to (i) introduce participants to statistical and data visualization tools available in R, (ii) promote the use of R by participants in their own work and research, and (iii) promote reproducible research through making all code and workshop content freely available to all participants. 
 
 ### What's on this page
 This page is going to guide you through **steps to take** to prepare for the upcoming workshops. The primary goals are to: \newline
+
 1. Have each participant ready to use R and Rstudio. \newline
 2. Provide pratical tips on how to prepare for the workshops. \newline
 3. Outline the content of each workshop. \newline
@@ -49,10 +57,9 @@ Before participating in one of our workshops please [register here](https://stat
 ### Live Coding
 Similar to a [Software or Data Carpentry workshop](https://carpentries.org/), instructors will work through the workshop with participants, typing in the code, reformatting data, and talking as we go. This is called “live coding”. However, the instructor is not live coding in a vacuum. Importantly, participants are strongly encouraged to “code-along” with the instructor. We refer to the practice of having the instructor live code and the learners code along as “participatory live coding” or, less formally, ‘code-along sessions’. For some suggestions on how to format you screen, see [below](#during).
 
-
 ---
 
-## Steps for a successful workshop{#steps} 
+## Workshop Preparation{#steps} 
 ### Before the workshop{#before}
 1. Complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link)
 2. Make sure that you have downloaded and installed R and Rstudio
@@ -67,6 +74,7 @@ Similar to a [Software or Data Carpentry workshop](https://carpentries.org/), in
 1. Sign in on our [registration form]()
 2. It is hard to keep track of everything on your screen, especially if you only have a single monitor. If you are in this situation, we recommend having as few programs open on your screen as possible. We recommend splitting your layout so that you have your Rstudio session on one side of your screen, and WebEx on the other side of the screen:
 ![](screen_layout.png)
+
 
 
 
@@ -99,6 +107,7 @@ Rstudio is a free, open source R Integrated Development Environment (IDE). It pr
 
 #### Basic layout of RStudio
 When you first open RStudio, you will be greeted by three panels:
+
 * The interactive R console/Terminal (entire left)
 * Environment/History/Connections (tabbed in upper right)
 * Files/Plots/Packages/Help/Viewer (tabbed in lower right):
