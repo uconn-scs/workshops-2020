@@ -51,7 +51,7 @@ This page is going to guide you through **steps to take** to prepare for the upc
 3. Outline the content of each workshop. \newline
 
 ### Workshop Survey
-Before participating in one of our workshops please [register here](https://statsconsulting.uconn.edu/workshop-schedule/), and complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link). This **survey** is a valuable tool, allowing us to ensure that you get the most out of our workshops.  
+Before participating in one of our workshops please [register here](https://statsconsulting.uconn.edu/workshop-schedule/) (you do not need to register again if you have already), and complete our [pre-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSfMo0TcrzJGHsD57B9HhABmpXL-GoH5yQAHC0CufJp7HGSCaw/viewform?usp=sf_link). This **survey** is a valuable tool, allowing us to ensure that you get the most out of our workshops.  
 
 
 ### Live Coding
