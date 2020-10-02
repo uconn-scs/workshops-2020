@@ -222,14 +222,14 @@ install.packages("ggplot2")
 
 ![](intro10.png)
 
-You can check which packages you have loaded by typing `installed.packages()`
+You can check which packages you have loaded by typing `installed.packages()`. Once you have installed a package, it will not need to be installed again.
 
 ```{r, eval = FALSE}
 installed.packages()
 
 ```
 
-To make the packages available to in the current session, you need to use the `library()` function. Note this will only work on installed packages. 
+To make the packages available to in the current session, you need to use the `library()` function. Note this will only work on installed packages. You will need to load packages each time you start a new Rstudio session. 
 
 ```{r, eval = FALSE}
 library(ggplot2)
