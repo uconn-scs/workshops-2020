@@ -22,7 +22,7 @@ output:
       height:40px" type="submit" formaction="#abcd">Workshop Outlines</button>
     <button 
       style="background-color:#159061;color:white;width:150px;
-      height:40px" type="submit" formaction="Intro_R.Rmd">Pre-workshop</button>
+      height:40px" type="submit" formaction="Intro_R.html">Pre-workshop</button>
 
 </form>
 
