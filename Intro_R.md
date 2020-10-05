@@ -60,8 +60,8 @@ command prompt.
 
 ## Working in R
 
-**Using R as a calculator** Let’s start programming by getting R to do
-some arithmetic for us. I am going to do this in the editor window. I
+**Using R as a calculator** <br> Let’s start programming by getting R to
+do some arithmetic for us. I am going to do this in the editor window. I
 have linked this file to dropbox, so that you can access all of the
 coding I am doing via the link in the etherpad. There may be a bit of
 delay, but I will try to remember to save frequently so that it stays
