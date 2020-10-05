@@ -26,9 +26,6 @@ output:
 
 </form>
 
-
-<a href="team.html"class="button">Team</a>
-
 ```{r, echo=FALSE, eval = FALSE, include=FALSE}
 htmltools::img(src = 'logo2.png', 
                alt = 'logo', 
