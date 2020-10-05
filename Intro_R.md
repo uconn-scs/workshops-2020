@@ -58,7 +58,7 @@ command prompt.
   - This is a great way to start; all your code is saved for later.
   - Can easily share code this way.
 
-## Introduction to R
+## Working in R
 
 **Using R as a calculator** Let’s start programming by getting R to do
 some arithmetic for us. I am going to do this in the editor window. I
@@ -187,7 +187,7 @@ people use different conventions for long variable names, these include:
 
 What you use is up to you, but be consistent.
 
-    What will be the value of each variable after each statement is the following:
+    What will be the value of each variable after each statement in the following:
     
     mass <- 47.5
     age <- 122
@@ -263,8 +263,9 @@ installed, and note that the package name here doesn’t need to be in
 quotations like it does when you install the package. * <br> *Note: Once
 a package is installed, it doesn’t need to be installed again*
 
-Multiple packages can be loaded or installed by concatenating them into
-a string. For example, you can install `dyplr` and `ggplot2` using:
+Multiple packages can be loaded or installed by putting them into a
+string. This is done using the incredibly useful concatenate function,
+`c()`. For example, you can install `dyplr` and `ggplot2` using:
 
 ``` r
 install.packages(c("dplyr", "ggplot2"))
@@ -275,6 +276,155 @@ install.packages(c("dplyr", "ggplot2"))
     "ISLR", "ggplot2", "GGally", "dplyr", "cowplot", "mice"
     
     And load them to make them available in the current session.
+
+## Exploring dataframes
+
+Most of the time when we are working in R, we will be working with data
+that are in the form of dataframes. This data will usually be imported
+into R from a spreadsheet or text file.
+
+Many packages also include data that we can use as templates for our own
+data and analyses. For example, we will explore data in a dataframe that
+comes pre-installed with R.
+
+``` r
+data("iris")
+```
+
+We can begin by getting a sense of the structure of the dataframe. To
+start let’s see what the data look like by clicking on the dataframe in
+our environment window. Clicking on it will open a new tab showing the
+data as we’d see it in a spreadsheet. A more reproducible way to do this
+would be to call the head of the dataframe:
+
+``` r
+head(iris)
+```
+
+Here we see that the dataframe has 14 columns. The function `head()` has
+pulled up the first 6 rows.
+
+We can see more information about each variable using the `str()`
+function
+
+``` r
+str(iris)
+```
+
+Now we see that `iris` is a dataframe with 150 observations (or rows)
+and 5 variables (or columns). We also se a description of each variable.
+Here we see that we have numeric variables and `Species` which is
+labeled as a factor. Factors are categorical variables, similar to
+characters.
+
+Here are a few functions we can use to get a sense of our data
+structure:
+
+``` r
+nrow(iris)
+ncol(iris)
+dim(iris)
+```
+
+We can also index individual variables by using the dollar sign, `$`.
+For example to select the **Species** variable we can use:
+
+``` r
+iris$Species
+```
+
+## Plotting data with ggplot2
+
+A large component of analysing data, including exploratory data
+analysis, is using data visualization. Plotting data can be done in base
+R, and this is what many packages will use. For example, we can plot
+**sepal length** against **sepal width** using the built-in `plot()`
+function:
+
+``` r
+plot(iris$Sepal.Length, iris$Sepal.Width)
+```
+
+Note that we are specifying the data to use using the name of the
+dataframe (iris), and the ‘$’ to specify the columns. While this plot
+was very easy to produce, it is not the most appealing figure (I
+wouldn’t want to put this in a publication). There are a number of
+things we could do to improve it: change the axis labels, color the
+points by species, add trendlines, etc. All of this is possible to do in
+base R, but we will do this using functions in `ggplot2`.
+
+### The grammar of graphics
+
+ggpplot2 is build on the ‘grammar of graphics’ (hence ‘gg’).
+Essentially, this is a framework which follows a layered approach to
+describe and construct visualizations, or graphics in a structured
+manner. This means that plots are constructed from different types of
+layers, all of which can be modified and customized.
+
+Let’s start by reproducing the plot from before in ggplot. This plot is
+a scatterplot, so we will use the `geom_point()` plot type.
+
+``` r
+library(ggplot2)
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width))+
+  geom_point()
+```
+
+In the first row we have specified the dataframe to use (iris), as well
+as the aesthetics of the plot, in this case the variables to use for the
+x and y axes. This is the first layer of your plot Each of these (data
+and aes) are **arguments** *within* the `ggplot()` function. The second
+row tells us the second layer we want to add. In this case, a
+scatterplot layer. We have to finish this line with the open and closed
+parentheses because `geom_point()` is an arugument. Here we are not
+changing any arguments. We combine the two rows using the ‘+’ sign.
+
+Now let’s make some of those changes we mentioned above. First the axis
+labels. These can be thought of as an additional layer. The ggplot2
+default is to use the names of the variables as they appear in the
+dataframe. Let’s remove the ‘.’ and include the measurment unit:
+
+``` r
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width))+
+  geom_point() + 
+  xlab("Sepal Length (cm)")+
+  ylab("Sepal Width (cm)")
+```
+
+Note that we still specify the variable names how they appear in the
+dataframe, and we place the *labels* in quotes.
+
+How about adding some color and trendlines for each species?
+
+``` r
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, 
+                        color = Species))+
+  geom_point() + 
+  xlab("Sepal Length (cm)") +
+  ylab("Sepal Width (cm)") + 
+  geom_smooth(method = "lm")
+```
+
+Maybe we don’t like the background, so we can change the plotting theme
+(i.e., add another layer):
+
+``` r
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, 
+                        color = Species))+
+  geom_point() + 
+  xlab("Sepal Length (cm)") +
+  ylab("Sepal Width (cm)") + 
+  geom_smooth(method = "lm")+
+  theme_classic()
+```
+
+Now this plot is looking more like something we could put into a report
+or a paper\!
+
+    Use ggplot2 to make a plot of petal length vs petal width. 
+    Relable the axes, inlcuding units (cm).
+    Color the points by species, and include a separate trendline 
+    for each species.
 
 ## Seeking help
 
@@ -319,13 +469,12 @@ packages grouped into fields.<br>
 
 Also *Stack Overflow* can be very helpful. Remeber to use the \[r\] tag
 for your question. There are very specific formats for questions on
-these types of sites; it is suggested that you use the functions:
+these types of sites; it is suggested that you use the functions below
+to help get the information people seeing your question might need.
 
 ``` r
 ?dput
 sessionInfo()
 ```
 
-to help get the information people seeing your question might need.
-
-## Exploring dataframes
+-----
