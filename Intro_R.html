@@ -407,7 +407,7 @@ summary {
 </div>
 <div id="working-in-r" class="section level2">
 <h2>Working in R</h2>
-<p><strong>Using R as a calculator</strong> <br> Let’s start programming by getting R to do some arithmetic for us. I am going to do this in the editor window. I have linked this file to dropbox, so that you can access all of the coding I am doing via the link in the etherpad. There may be a bit of delay, but I will try to remember to save frequently so that it stays relatively up to date.</p>
+<p><strong>Using R as a calculator</strong> <br> Let’s start programming by getting R to do some arithmetic for us. I am going to do this in the editor window. I have linked this file to dropbox, so that you can access all of the coding I am doing via the link in the google doc. There may be a bit of delay, but I will try to remember to save frequently so that it stays relatively up to date.</p>
 <p>There are a few different ways to run commands or ‘chunks’ of code from the editor window, depending on the OS you are using:</p>
 <ul>
 <li>Click run (all systems)</li>
@@ -420,7 +420,7 @@ summary {
 <p>Remember to actually run this we hit ctrl or cmd + enter, or click the run button.</p>
 <p>You’ll see that the line we’ve just run pops up in the console, along with the output from the command we’ve just given R. If you run an incomplete command, R will wait for you to complete it:</p>
 <pre class="r"><code>1 + [Ctrl + Enter]</code></pre>
-<p>Note that the &gt; in the console window is now a + indicating that are is waiting for the command to be completed. You can exit commands by pressing escape within the console window.</p>
+<p>Note that the &gt; in the console window is now a + indicating that R is waiting for the command to be completed. You can exit commands by pressing escape within the console window.</p>
 <p>When using R as a calculator, the order of operations is the same as you would have learned back in school. From highest to lowest precedence:</p>
 <ul>
 <li>Parentheses: ( )</li>
@@ -506,16 +506,18 @@ And load them to make them available in the current session.
 <pre class="r"><code>data(&quot;iris&quot;)</code></pre>
 <p>We can begin by getting a sense of the structure of the dataframe. To start let’s see what the data look like by clicking on the dataframe in our environment window. Clicking on it will open a new tab showing the data as we’d see it in a spreadsheet. A more reproducible way to do this would be to call the head of the dataframe:</p>
 <pre class="r"><code>head(iris)</code></pre>
-<p>Here we see that the dataframe has 14 columns. The function <code>head()</code> has pulled up the first 6 rows.</p>
+<p>Here we see that the dataframe has 5 columns. The function <code>head()</code> has pulled up the first 6 rows.</p>
 <p>We can see more information about each variable using the <code>str()</code> function</p>
 <pre class="r"><code>str(iris)</code></pre>
-<p>Now we see that <code>iris</code> is a dataframe with 150 observations (or rows) and 5 variables (or columns). We also se a description of each variable. Here we see that we have numeric variables and <code>Species</code> which is labeled as a factor. Factors are categorical variables, similar to characters.</p>
+<p>Now we see that <code>iris</code> is a dataframe with 150 observations (or rows) and 5 variables (or columns). We also see a description of each variable. Here we see that we have numeric variables and <code>Species</code> which is labeled as a factor. Factors are categorical variables, similar to characters.</p>
 <p>Here are a few functions we can use to get a sense of our data structure:</p>
 <pre class="r"><code>nrow(iris)
 ncol(iris)
 dim(iris)</code></pre>
 <p>We can also index individual variables by using the dollar sign, <code>$</code>. For example to select the <strong>Species</strong> variable we can use:</p>
 <pre class="r"><code>iris$Species</code></pre>
+<pre><code>How many rows and columns are in the &#39;mtcars&#39; dataset?
+</code></pre>
 </div>
 <div id="plotting-data-with-ggplot2" class="section level2">
 <h2>Plotting data with ggplot2</h2>
