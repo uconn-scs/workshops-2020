@@ -316,13 +316,29 @@ If you would like to keep all of the code you have written, you can now safe thi
         - Mosaic plots 
 * Relationships and Associations
     + Combining continuous and categorical data
-* More about Plots
-    + Scatterplots
-    + Plotting large numbers of points
-    + Adding linear and non-linear trendlines
-* Scatterplot matrix: comparing multiple groups
+* Comparing multiple groups
+* Interactive plots with plotly
 * Q & A session
 
+### Power Analysis I
+* Introduction
+* Important Terms
+    + Null and Alternative Hypothesis
+    + Type I and Type II error rates
+    + Power
+    + Significance Level
+    + Effect Size
+* Factors That affect power
+* How to choose effect size
+* How to choose power
+* How to choose level of significance
+* Other factors
+* Consequences of being underpowered
+    + False Negatives
+    + Lower positive predictive value
+    + Inflated effect size estimates
+* Example using pwr package
+* Q & A session
 
 --- 
 

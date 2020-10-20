@@ -285,7 +285,6 @@ How many rows and columns are in the 'mtcars' dataset?
 
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 ## Plotting data with ggplot2
 
 A large component of analysing data, including exploratory data analysis, is using data visualization. Plotting data can be done in  base R, and this is what many packages will use. For example, we can plot **sepal length** against **sepal width** using the built-in `plot()` function:
