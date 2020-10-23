@@ -12,17 +12,20 @@ output:
       style="background-color:#159061;color:white;width:150px;
       height:40px" type="submit" formaction="#steps">Workshop Preparation</button>
     <button 
-      style="background-color:#159061;color:white;width:150px;
-      height:40px" type="submit" formaction="#start">R and R Studio Setup</button>
+      style="background-color:#159061;color:white;width:143px;
+      height:40px" type="submit" formaction="#start">R & RStudio Setup</button>
     <button 
-      style="background-color:#159061;color:white;width:150px;
+      style="background-color:#159061;color:white;width:143px;
       height:40px" type="submit" formaction="#intro">Introduction to R</button>
     <button 
-      style="background-color:#159061;color:white;width:150px;
+      style="background-color:#159061;color:white;width:143px;
       height:40px" type="submit" formaction="#abcd">Workshop Outlines</button>
     <button 
-      style="background-color:#159061;color:white;width:150px;
+      style="background-color:#159061;color:white;width:143px;
       height:40px" type="submit" formaction="Intro_R.html">Pre-workshop</button>
+    <button 
+      style="background-color:#159061;color:white;width:143px;
+      height:40px" type="submit" formaction="Power-Analysis.html">Power Analysis</button>
 
 </form>
 

@@ -1,0 +1,17 @@
+---
+title: "Power Analysis"
+author: "The SCS Team"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: cerulean
+    highlight: github
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Power Analysis Notes
+<embed src="Power_Analysis_I.pdf#toolbar=0" width="1000" height="2000">
+
+
